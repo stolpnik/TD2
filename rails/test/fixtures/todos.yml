@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: 
+  done: 
+  start_at: 
+  finish_at: 2013-09-02 19:50:35
+
+two:
+  title: 
+  done: 
+  start_at: 
+  finish_at: 2013-09-02 19:50:35

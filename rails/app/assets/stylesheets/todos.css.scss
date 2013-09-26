@@ -1,0 +1,36 @@
+// Place all the styles related to the todos controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.todolist-item{
+	font-size: 1.1em;
+	line-height: 1.5em;
+}
+
+.done{
+	$color: #DEDEDE;
+	color: $color;
+	a, a:link, a:hover, a:visited{
+		color: $color;
+	}
+
+	input[type=checkbox]{
+		color: $color;
+	}
+}
+
+.handle{
+	cursor: move;
+}
+
+.checkbox-btn{
+	cursor: pointer;
+
+	&:hover{
+		color: #ACACAC;
+	}
+}
+
+.text-input{
+	display: none;
+}

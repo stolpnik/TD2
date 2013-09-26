@@ -1,0 +1,13 @@
+<li id="todo_{{id}}" class="{{#done}}done{{/done}} todolist-item">
+	<span class="todo-checkbox checkbox-btn glyphicon {{#done}}icon-check{{/done}}{{^done}}icon-unchecked{{/done}}"></span>
+	<a class="text-input-link">{{title}}</a>
+	<span class="text-input">
+		<input type="text" value="{{title}}" />
+		<a class="js-text-input-close-link"><span class="glyphicon icon-remove-circle"></span></a>
+	</span>
+	<span class="js-todo-control">
+	<a class="js-edit-link" href="/lists/{{list_id}}/todos/{{id}}/edit"><span class="glyphicon icon-edit"></span></a>
+	<a class="js-delete-link" data-confirm="Are you sure?" data-method="delete" href="/lists/{{list_id}}/todos/{{id}}" rel="nofollow"><span class="glyphicon icon-remove"></span></a>
+	</span>
+	<span class="js-todo-checked-at" data-checked-at="{{checked_at}}"></span>
+</li>

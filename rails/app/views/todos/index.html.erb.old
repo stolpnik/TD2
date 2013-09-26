@@ -1,0 +1,11 @@
+<h1><%= @list.title %></h1>
+
+<ul id="todo-list">
+  <% @todos.each do |todo| %>
+	  <%= render partial: 'list', locals: { todo: todo } %>
+  <% end %>
+</ul>
+
+<%= link_to 'New Todo', new_polymorphic_path( [@list, Todo] ), class: "js-new-todo-link" %>
+
+<%= render partial: 'new_form' %>

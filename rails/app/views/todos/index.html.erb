@@ -1,0 +1,9 @@
+<h1><%= @list.title %></h1>
+
+<div id="contents">
+
+</div>
+
+<%= link_to 'New Todo', new_polymorphic_path( [@list, Todo] ), class: "js-new-todo-link" %>
+
+<%= render partial: 'new_form' %>

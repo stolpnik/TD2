@@ -1,0 +1,80 @@
+// Place all the styles related to the lists controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+	background-color: #fff;
+	color: #333;
+	font-family: verdana, arial, helvetica, sans-serif;
+}
+
+p, ol, ul, td {
+	font-family: verdana, arial, helvetica, sans-serif;
+}
+
+pre {
+	background-color: #eee;
+}
+
+a {
+	color: #000;
+	&:visited {
+		color: #666;
+	}
+	&:hover {
+		color: #CCC;
+	}
+}
+
+a > .glyphicon{
+	text-decoration: none;
+}
+
+.glyphicon+a{
+	margin-left: 5px;
+}
+
+div {
+	&.field, &.actions {
+		margin-bottom: 10px;
+	}
+}
+
+#notice {
+	color: green;
+}
+
+.field_with_errors {
+	padding: 2px;
+	background-color: red;
+	display: table;
+}
+
+#error_explanation {
+	width: 450px;
+	border: 2px solid red;
+	padding: 7px;
+	padding-bottom: 0;
+	margin-bottom: 20px;
+	background-color: #f0f0f0;
+	h2 {
+		text-align: left;
+		font-weight: bold;
+		padding: 5px 5px 5px 15px;
+		margin: -7px;
+		margin-bottom: 0px;
+		background-color: #c00;
+		color: #fff;
+	}
+	ul li {
+		list-style: square;
+	}
+}
+
+.list{
+	margin-bottom: 5px;
+}
+
+.badge{
+	margin-left: 5px;
+}

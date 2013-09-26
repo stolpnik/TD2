@@ -1,0 +1,15 @@
+<li id="todo_<%= todo.id %>" class="<%= todo.done ? 'todo-done' : '' %>">
+  <%= form_for [todo.list, todo], remote: true do |f| %>
+      <%= f.check_box :done, :onclick => "$('#edit_todo_#{todo.id}').submit();" %>
+      <a class="text-input-link"><%= todo.title %></a>
+		    <span class="text-input">
+		    <%= f.text_field :title %>
+		      <a class="js-text-input-close-link">[閉じる]</a>
+		    </span>
+		    <span class="js-todo-control">
+		    <%= link_to '[e]', edit_polymorphic_path([@list, todo]) %>
+		      <%= link_to '[x]', [@list, todo], method: :delete, data: { confirm: 'Are you sure?' } %>
+		    </span>
+      <span class="js-todo-checked-at" data-checked-at="<%= todo.checked_at.nil? ? '' : todo.checked_at.strftime("%Y-%m-%dT%H:%M:%SZ") %>"></span>
+  <% end %>
+</li>

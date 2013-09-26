@@ -1,0 +1,32 @@
+# Place all the behaviors and hooks related to the matching controller here.
+# All this logic will automatically be available in application.js.
+# You can use CoffeeScript in this file: http://coffeescript.org/
+#= require ./models/list_model
+#= require ./collections/todo_collection
+#= require ./views/todo/todo_view
+
+class Stodo.app.Todos
+	index: ->
+		$(".js-todo-checked-at").prettyDate( interval: 1000, attribute: 'data-checked-at' )
+
+		#show text-input
+		$("#todo-list").on "click", ".text-input-link", ->
+			$(this).hide().parent().find(".text-input").show()
+			$(this).parent().find( ".js-todo-control" ).hide()
+
+		$("#todo-list").on "click", ".js-text-input-close-link", ->
+			$(this).parent().hide().parent().find(".text-input-link" ).show()
+			$(this).parent().parent().find( ".js-todo-control" ).show()
+
+		#submit form
+		$("#todo-list").on "keyup", ".text-input", (e)->
+			if e.keyCode is 13
+				$(this).parent().submit()
+				$(this).hide().parent().find(".text-input-link").show()
+				$(this).parent().find( ".js-todo-control" ).show()
+
+		newTodo = new Stodo.views.todo.NewTodoView( list_id: <%= 1 %> )
+
+		$(".js-new-todo-link").on "click", (e)=>
+			newTodo.show()
+			return false
