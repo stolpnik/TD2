@@ -1,11 +1,11 @@
-<li class="list">
-	<span class="glyphicon icon-list"></span><a class="todo-lists-link" href="#/{{id}}/todos">{{title}}<span class="badge">{{undone}}</span></a>
+<li id="list_{{id}}" class="list">
+	<span class="glyphicon icon-list"></span><a class="todo-lists-link" href="#/{{id}}/todos"><span class="list-title">{{title}}</span><span class="badge">{{undone}}</span></a>
 	<span class="text-input">
 		<input type="text" value="{{title}}" />
 		<a class="js-text-input-close-link"><span class="glyphicon icon-remove-circle"></span></a>
 	</span>
 	<span class="js-list-control">
 		<a class="js-edit-link" href="/lists/{{id}}/edit"><span class="glyphicon icon-edit"></span></a>
-		<a class="js-delete-link" data-confirm="Are you sure?" data-method="delete" href="/lists/{{id}}" rel="nofollow"><span class="glyphicon icon-remove"></span></a>
+		<a class="js-delete-link" data-method="delete" href="/lists/{{id}}" rel="nofollow"><span class="glyphicon icon-remove"></span></a>
 	</span>
 </li>

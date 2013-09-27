@@ -9,10 +9,10 @@ class Stodo.collections.ListCollection extends Backbone.Collection
 		super( data )
 		return data
 
-	toJSON: ->
-		arr = super()
-		_.each arr, (list, index, arr)->
-			undone = _.filter list.todos, (todo, index, arr)->
-				return true unless todo.done
-			list.undone = undone.length
-		return arr
+#	toJSON: ->
+#		arr = super()
+#		_.each arr, (list, index, arr)->
+#			undone = _.filter list.todos, (todo, index, arr)->
+#				return true unless todo.done
+#			list.undone = undone.length
+#		return arr

@@ -24,7 +24,7 @@ class Stodo.views.list.NewView extends Stodo.views.ViewBase
 		@collection.create(@model.toJSON(),
 			success: (list) =>
 				@model = list
-				@router.navigate "/", trigger: true
+				@router.navigate "//index", trigger: true
 
 			error: (list, jqXHR) =>
 				@model.set({errors: $.parseJSON(jqXHR.responseText)})

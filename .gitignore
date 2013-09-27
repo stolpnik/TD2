@@ -20,4 +20,5 @@ rails/.idea
 .idea
 rails/Gemfile.lock
 
+rails/config/unicorn_config_*
 rails/public/assets
