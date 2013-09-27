@@ -20,3 +20,4 @@ rails/tmp
 rails/.idea
 
 .idea
+rails/Gemfile.lock
