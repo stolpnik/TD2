@@ -19,3 +19,5 @@ rails/.idea
 
 .idea
 rails/Gemfile.lock
+
+rails/public/assets
