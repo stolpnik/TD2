@@ -7,8 +7,6 @@
 # Ignore bundler config.
 rails/.bundle
 
-rails/Gemfile.lock
-
 # Ignore the default SQLite database.
 rails/db/*.sqlite3
 rails/db/*.sqlite3-journal
