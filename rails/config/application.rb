@@ -17,6 +17,11 @@ module TD2
     # config.time_zone = 'Central Time (US & Canada)'
 		config.time_zone = 'Tokyo'
 
+		config.assets.precompile += ["fontawesome-webfont.ttf",
+		                             "fontawesome-webfont.eot",
+		                             "fontawesome-webfont.svg",
+		                             "fontawesome-webfont.woff"]
+
 		#config.assets.enabled = true
 
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
